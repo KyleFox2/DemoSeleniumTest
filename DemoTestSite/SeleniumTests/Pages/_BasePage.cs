@@ -24,13 +24,13 @@ namespace DemoTestSite.SeleniumTests.Pages
             try
             {
                 // Attempt to find the element
-                var element = wait.Until(c => c.FindElement(by));
-                driver.FindElement(by);
+                var element = wait.Until(c => c.FindElement(by));   
+                
                 return true;
             }
             catch (WebDriverTimeoutException)
             {
-                // Element was not found
+                // Element was not found within the specified timeout
                 return false;
             }
         }       

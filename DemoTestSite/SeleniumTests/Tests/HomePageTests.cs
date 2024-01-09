@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace DemoTestSite.SeleniumTests.Tests
 {
     [TestFixture]
-    public class HomePageTests : _BaseTest
+    public class HomePageTests : BaseTest
     {
         private HomePage homePage;
 
@@ -28,10 +28,13 @@ namespace DemoTestSite.SeleniumTests.Tests
         [TestCase("Get Started: How you use this application is up to you, but here are a few things to get you started:Explore the home page\r\nAccess the admin panel with the credentials admin/password\r\nYou can read more about the features here\r\nIf you find a particularly bad bug, feel free to raise it herePlease note: for security reasons the database resets every 10 minutes.", TestScenario.GetStartedText)]
         [TestCase("restful-booker-platform v1.6.0 Created by Mark Winteringham / Richard Bradshaw - © 2019-22 Cookie-Policy - Privacy-Policy - Admin panel\r\nLearn more about Automation in Testing", TestScenario.GetFooterText)]
         [TestCase("Welcome to Shady Meadows, a delightful Bed & Breakfast nestled in the hills on Newingtonfordburyshire. A place so beautiful you will never want to leave. All our rooms have comfortable beds and we provide breakfast from the locally sourced supermarket. It is a delightful place.", TestScenario.GetWelcomeText)]
+        [TestCase("Rooms", TestScenario.RoomsTitle)]
+        [TestCase("single", TestScenario.SingleTitle)]
+        [TestCase("Aenean porttitor mauris sit amet lacinia molestie. In posuere accumsan aliquet. Maecenas sit amet nisl massa. Interdum et malesuada fames ac ante.TV\r\nWiFi\r\nSafe", TestScenario.RoomsText)]
         public void TestHomePageText(string expectedText, TestScenario scenario)
         {
             string actualText = GetActualText(scenario);
-
+            
             Assert.IsTrue(homePage.IsAlertBannerPresent(), "Alert banner isn't present");
             Assert.That(actualText, Is.EqualTo(expectedText), "There is a discrepancy between the two sets of text");
         }
@@ -73,6 +76,12 @@ namespace DemoTestSite.SeleniumTests.Tests
                     return homePage.GetFooterText();
                 case TestScenario.GetWelcomeText:
                     return homePage.GetWelcomeText();
+                case TestScenario.RoomsTitle:
+                    return homePage.GetRoomsTitle();
+                case TestScenario.RoomsText:
+                    return homePage.GetRoomsText();
+                case TestScenario.SingleTitle:
+                    return homePage.GetSingleTitle();
                 default:
                     return "";
             }
@@ -103,6 +112,9 @@ namespace DemoTestSite.SeleniumTests.Tests
             GetStartedText,
             GetFooterText,
             GetWelcomeText,
+            RoomsTitle,
+            SingleTitle,
+            RoomsText,
             GetHomeImage,
             GetWelcomeImage,
             GetMapImage

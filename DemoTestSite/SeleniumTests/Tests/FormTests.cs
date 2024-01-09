@@ -15,7 +15,7 @@ using System.Numerics;
 namespace DemoTestSite.SeleniumTests.Tests
 {
     [TestFixture]
-    public class FormTests : _BaseTest
+    public class FormTests : BaseTest
     {
         private FormPage formPage;
 

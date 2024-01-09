@@ -12,7 +12,7 @@ namespace DemoTestSite.SeleniumTests
 {
     namespace SeleniumTests
     {
-        public class _BaseTest
+        public class BaseTest
         {
             protected IWebDriver driver;
             protected WebDriverWait wait;
@@ -22,6 +22,7 @@ namespace DemoTestSite.SeleniumTests
             {
                 driver = WebDriverFactory.GetDriver();
                 wait = new WebDriverWait(driver, TimeSpan.FromSeconds(2));
+
                 driver.Navigate().GoToUrl("https://automationintesting.online/");
                 Assert.That(driver.Url, Is.EqualTo("https://automationintesting.online/"));
             }
