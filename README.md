@@ -3,6 +3,8 @@
 **Description:**
 This project demonstrates the use of automated testing using Selenium WebDriver in C#. The project includes a sample web application with multiple pages, each representing different scenarios commonly encountered in web testing. The automated tests are designed to showcase various Selenium features, such as interacting with form elements, handling alerts, and validating page content.
 
+https://automationintesting.online/
+
 **Features:**
 - HomePage: Includes examples of handling alerts, and validating page elements.
 - BookingPage: Illustrates interacting with dynamic content, form submission and validation.
