@@ -15,6 +15,12 @@ https://automationintesting.online/
 - NUnit testing framework
 - Page Object Model (POM) for a clean and maintainable test structure
 
+**Testing**  
+- Test cases in Excel, check [this Google Sheets document](https://docs.google.com/spreadsheets/d/18NszpYo1fmwGb__hvIy-mU81LSvELhMYlyICU1u1R9k/edit?usp=sharing).
+- Bug reports in Azure DevOps:
+  - Bug #1, check [this screenshot](https://drive.google.com/file/d/1-1ge4B71fdWDkyXuiIv-v0nl7GNZkOzL/view?usp=sharing).
+  - Bug #2, check [this screenshot](https://drive.google.com/file/d/16ZdpU9XSPC_Nn_TF4I9b2tux0EyoNKAy/view?usp=sharing).  
+ 
 **How to Use:**
 
     Clone the repository to your local machine.
